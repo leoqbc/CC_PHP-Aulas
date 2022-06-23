@@ -1,0 +1,5 @@
+apk --update upgrade \
+&& apk add autoconf automake make gcc g++ \
+            libtool pkgconfig libmcrypt-dev re2c git zlib-dev xdg-utils \
+            libpng-dev freetype-dev libjpeg-turbo-dev \
+            openssh-client libxslt-dev ca-certificates gmp-dev
