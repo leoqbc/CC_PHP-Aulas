@@ -3,5 +3,5 @@
 Aqui colocarei os arquivos das aulas do curso Campos Code
 
 
-# Professo
+# Professor
 Leonardo Tumadjian

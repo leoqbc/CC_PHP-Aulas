@@ -11,5 +11,5 @@ services:
     image: php:7.4-fpm-alpine
     volumes:
       - .:/app
-      # - ./docker/opcache.ini:/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
-      # - ./docker/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./docker/opcache.ini:/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
+      - ./docker/www.conf:/usr/local/etc/php-fpm.d/www.conf
