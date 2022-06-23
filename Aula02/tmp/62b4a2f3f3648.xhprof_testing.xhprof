@@ -1,1 +1,0 @@
-a:3:{s:22:"main()==>number_format";a:5:{s:2:"ct";i:10001;s:2:"wt";i:13339;s:3:"cpu";i:9427;s:2:"mu";i:392880;s:3:"pmu";i:1120;}s:23:"main()==>xhprof_disable";a:5:{s:2:"ct";i:1;s:2:"wt";i:1;s:3:"cpu";i:0;s:2:"mu";i:520;s:3:"pmu";i:248;}s:6:"main()";a:5:{s:2:"ct";i:1;s:2:"wt";i:27793;s:3:"cpu";i:25426;s:2:"mu";i:2000;s:3:"pmu";i:2000;}}
