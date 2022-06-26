@@ -8,15 +8,19 @@ use Illuminate\Support\Facades\DB;
 class ProductsController extends Controller
 {
     public function index()
-    {
+    {   
+        $products = Product::all();
+        // $products = Product::lazy();
+
+        // sleep(5);
+
         // $products = Product::query()
         //     ->leftJoin('categories', 'products.id', '=', 'categories.product_id')
-        //     ->select(DB::raw('products.id, products.nome, products.descricao, count(categories.product_id) as totalCategory'))
-        //     ->groupBy('products.id','products.nome', 'products.descricao', 'categories.product_id')
-        //     ->orderBy('categories.product_id', 'desc')
-        // ->paginate(20);
-        sleep(5);
-        $products = Product::paginate(30);
+        //     ->select(
+        //         'products.*', 
+        //         DB::raw("group_concat(' ', categories.nome) as categories_list")
+        //     )->groupBy('products.id')
+        // ->lazy();
 
         return view('products', compact('products'));
     }

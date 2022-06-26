@@ -47,11 +47,10 @@
                                         {{ $product->descricao }}
                                     </div>
                                     <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                        {{-- @if($product->totalCategory > 0) --}}
-                                            @foreach($product->categories as $category)
-                                                {{ $category->nome }}, 
-                                            @endforeach
-                                        {{-- @endif --}}
+                                        @foreach($product->categories as $category)
+                                            {{ $category->nome }}, 
+                                        @endforeach
+                                        {{-- {{ $product->categories_list }} --}}
                                     </div>
                                 </div>
                             </div>
