@@ -20,7 +20,7 @@ class ProductFactory extends Factory
             //
             'nome' => $this->faker->name(),
             'descricao' => $this->faker->sentence(),
-            'valor' => $this->faker->randomFloat(2, 20, 30)
+            'valor' => $this->faker->randomFloat(2, 20, 500)
         ];
     }
 }

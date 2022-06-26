@@ -1,0 +1,1 @@
+docker-compose exec -u 1001 nginx-php php $@
