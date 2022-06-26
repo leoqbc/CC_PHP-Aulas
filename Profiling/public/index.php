@@ -48,12 +48,16 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
-startXHProf();
+// Ativa automaticamente
+// a toda execução do Laravel
+// colocando o escopo somente na execução
+// startXHProf();
 
 $response = $kernel->handle(
     $request = Request::capture()
 )->send();
 
-endXHProf();
+// Desativa
+// endXHProf();
 
 $kernel->terminate($request, $response);
