@@ -21,13 +21,13 @@ $resultado1 = operacao_rapida();
 $resultado2 = operacao_longa();
 
 // 3s
-$resultado2 = operacao_longa();
+$resultado3 = operacao_longa();
 
 // 1s
-$resultado3 = operacao_media();
+$resultado4 = operacao_media();
 
 // Resultado sai em 8.2s
-var_dump($resultado1, $resultado2, $resultado3);
+var_dump($resultado1, $resultado2, $resultado3, $resultado4);
 
 // Código assíncrono
 
