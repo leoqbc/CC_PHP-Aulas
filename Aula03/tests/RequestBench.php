@@ -17,14 +17,7 @@ class RequestBench
     public function benchGuzzle()
     {
         ob_start();
-        $client = new Client();
-
-        for ($i = 1;$i <= 5; $i++) {
-            $response = $client->get('http://localhost:8011/user/' . $i);
-
-            $user = json_decode((string)$response->getBody());
-            echo $user->name . PHP_EOL;
-        }
+        // benchmark Guzzle
         ob_end_clean();
     }
 
@@ -35,16 +28,7 @@ class RequestBench
     public function benchReactPHP()
     {
         ob_start();
-        $client = new Browser();
-
-        for ($i = 1;$i <= 5; $i++) {
-            $client->get('http://localhost:8011/user/' . $i)->then(function (ResponseInterface $response) use ($i) {
-                if ($response->getStatusCode() === 200) {
-                    $user = json_decode((string)$response->getBody());
-                    echo $user->name . PHP_EOL;
-                }
-            });
-        }
+        // benchmark ReactPHP
         ob_end_clean();
     }
 
