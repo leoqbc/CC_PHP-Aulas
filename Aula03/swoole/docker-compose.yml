@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  phpswoole:
+    image: openswoole/swoole:4.11-php8.1
+    volumes:
+      - .:/var/www
+    ports:
+      - 8090:80
+    environment:
+      AUTORELOAD_PROGRAMS: "swoole"
+      AUTORELOAD_ANY_FILES: 0

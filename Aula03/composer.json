@@ -1,7 +1,8 @@
 {
     "require": {
         "react/react": "^1.2",
-        "guzzlehttp/guzzle": "^7.4"
+        "guzzlehttp/guzzle": "^7.4",
+        "openswoole/ide-helper": "^4.11"
     },
     "require-dev": {
         "phpbench/phpbench": "^1.2"

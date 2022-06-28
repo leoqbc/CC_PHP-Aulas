@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba602c536b32f222d3ae26e14ea6c913",
+    "content-hash": "81415f54a0b1778a5f1af13408a8de6f",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -431,6 +431,44 @@
                 }
             ],
             "time": "2022-06-20T21:43:11+00:00"
+        },
+        {
+            "name": "openswoole/ide-helper",
+            "version": "4.11.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openswoole/ide-helper.git",
+                "reference": "80ec936d4341f505edef6054211379616e6a2529"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openswoole/ide-helper/zipball/80ec936d4341f505edef6054211379616e6a2529",
+                "reference": "80ec936d4341f505edef6054211379616e6a2529",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.3"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Open Swoole Group",
+                    "email": "hello@openswoole.com"
+                }
+            ],
+            "description": "IDE help files for Open Swoole.",
+            "support": {
+                "issues": "https://github.com/openswoole/ide-helper/issues",
+                "source": "https://github.com/openswoole/ide-helper/tree/4.11.4"
+            },
+            "time": "2022-05-24T11:03:39+00:00"
         },
         {
             "name": "psr/http-client",

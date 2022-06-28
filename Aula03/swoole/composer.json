@@ -1,0 +1,5 @@
+{
+    "require": {
+        "openswoole/ide-helper": "^4.11"
+    }
+}
