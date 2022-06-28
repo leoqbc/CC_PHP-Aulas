@@ -1,5 +1,6 @@
 {
     "require": {
-        "openswoole/ide-helper": "^4.11"
+        "openswoole/ide-helper": "^4.11",
+        "guzzlehttp/guzzle": "^7.4"
     }
 }
