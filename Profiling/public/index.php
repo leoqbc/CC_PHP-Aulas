@@ -51,13 +51,13 @@ $kernel = $app->make(Kernel::class);
 // Ativa automaticamente
 // a toda execução do Laravel
 // colocando o escopo somente na execução
-// startXHProf();
+startXHProf();
 
 $response = $kernel->handle(
     $request = Request::capture()
 )->send();
 
 // Desativa
-// endXHProf();
+endXHProf();
 
 $kernel->terminate($request, $response);
