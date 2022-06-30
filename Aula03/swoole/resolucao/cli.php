@@ -1,23 +1,46 @@
 <?php
 
-use Swoole\Coroutine\System;
+use Swoole\Coroutine as co;
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-Co\run(function () {
-    $channel = new Swoole\Coroutine\Channel(1);
+// Co\run(function () {
 
-    go(function () use ($channel) {
-        for ($i=1; $i <= 10; $i++) {
-            System::usleep(500_000);
-            $channel->push($i);
-        }
-        $channel->close();
-    });
+//     go(function () {
+//         echo 'Olá' . PHP_EOL;
 
-    go(function () use ($channel) {
-        while($result = $channel->pop()) {
-            echo $result;
-        }
-    });
-});
+//         sleep(1);
+//         echo 'Mundo' . PHP_EOL;
+
+//         sleep(2);
+//         echo 'do PHP' . PHP_EOL;
+//     });
+
+//     go(function () {
+//         while (1) {
+//             sleep(1);
+//             echo 'Infinto!';
+//         }
+//     });
+
+// });
+
+
+// Co\run(function () {
+//     $channel = new Swoole\Coroutine\Channel(1);
+
+//     go(function () use ($channel) {
+//         for ($i=1; $i <= 10; $i++) {
+//             co::usleep(500_000);
+//             $channel->push($i);
+//         }
+//         $channel->close();
+//     });
+
+//     go(function () use ($channel) {
+//         while($result = $channel->pop()) {
+//             echo $result . PHP_EOL;
+//         }
+//     });
+
+// });

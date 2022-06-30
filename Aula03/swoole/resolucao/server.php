@@ -1,7 +1,7 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-use Swoole\Coroutine\System;
+use Swoole\Coroutine as co;
 
 use Swoole\Http\Request;
 use Swoole\Http\Response;
@@ -18,17 +18,10 @@ $server->on('Request', function (Request $request, Response $response) {
         return $response->setStatusCode(404);
     }
 
-    go(function () {
-        System::sleep(2);
-        echo "Terminou a entrega\n";
-    });
 
-    // go(function () use ($response) {
-    //     $response->setHeader('Content-Type', 'application/json');
-    //     $response->end(json_encode([
-    //         'hello' => 'world'
-    //     ]));
-    // }); 
+    // operação lenta
+    sleep(2);
+    echo "Terminou a entrega\n";
 
     $response->setHeader('Content-Type', 'application/json');
     $response->end(json_encode([
