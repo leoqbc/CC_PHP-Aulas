@@ -27,9 +27,9 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $channel = new Swoole\Coroutine\Channel(1);
 
-Co\run(fn () {
+Co\run(function () use ($channel) {
 
-    go(fn () {
+    go(function () use ($channel) {
         for ($i=1; $i <= 10; $i++) {
             co::usleep(500_000);
             $channel->push($i);
@@ -37,7 +37,7 @@ Co\run(fn () {
         $channel->close();
     });
 
-    go(fn () {
+    go(function () use ($channel) {
         while($result = $channel->pop()) {
             echo $result . PHP_EOL;
         }
