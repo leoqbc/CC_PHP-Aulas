@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "CampusCode\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    }
+}

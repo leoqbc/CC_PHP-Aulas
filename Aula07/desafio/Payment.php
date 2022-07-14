@@ -12,6 +12,6 @@ class Payment
     {
         # não programar
         $mercadoPago = new MercadoPagoSDK();
-        $this->mercadoPago->processPayment();
+        $mercadoPago->processPayment();
     }
 }
