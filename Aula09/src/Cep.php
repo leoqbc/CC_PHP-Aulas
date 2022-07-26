@@ -2,6 +2,8 @@
 
 namespace CampusCode;
 
+use GuzzleHttp\Client;
+
 class Cep
 {
     protected string $cep;
@@ -23,5 +25,14 @@ class Cep
     public function getValue()
     {
         return $this->cep;
+    }
+
+    public function getRemoteData(Client $client)
+    {
+        $result = $client->get('https://api.postmon.com.br/v1/cep/' . $this->cep);
+
+        $body = (string)$result->getBody();
+
+        return json_decode($body);
     }
 }
