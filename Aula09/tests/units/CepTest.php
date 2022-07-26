@@ -1,8 +1,7 @@
 <?php
 
 use CampusCode\Cep;
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Response;
+
 use PHPUnit\Framework\TestCase;
 
 class CepTest extends TestCase
@@ -59,23 +58,6 @@ class CepTest extends TestCase
     {
         $this->expectException($exception);
         $cep = new Cep($cep);
-    }
-
-    public function testVerificaCidadeRemoto()
-    {
-        $response = new Response(200, [], '{"cidade": "São Paulo"}');
-
-        $clientStub = $this->createStub(Client::class);
-        $clientStub->method('get')
-                   ->willReturn($response);
-
-        $cep = new Cep("01101-000");
-
-        $result = $cep->getRemoteData($clientStub);
-
-        var_dump($result);
-
-        $this->assertEquals("São Paulo", $result->cidade);
     }
 
 }
