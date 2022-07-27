@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  php:
+    image: webdevops/php-nginx-dev:8.1-alpine
+    volumes:
+      - .:/app
+    ports:
+      - ${SERVER_PORT}:80
+    env_file:
+      - .env
