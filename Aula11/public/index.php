@@ -2,16 +2,23 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = Slim\Factory\AppFactory::create();
+use Slim\Factory\AppFactory;
+
+use BeerFinder\ContainerBuilder;
+
+$container = ContainerBuilder::create();
+
+AppFactory::setContainer($container);
+$app = AppFactory::create();
+
+$app->addRoutingMiddleware();
 
 // Add Error Handling Middleware
 $app->addErrorMiddleware(true, false, false);
 
-$app->get('/', function (\Psr\Http\Message\RequestInterface $request, \Psr\Http\Message\ResponseInterface $response) {
-    $response->getBody()
-                    ->write('Teste 123');
-                    
-    return $response;
-});
+// Transform JSON or XML in PHP data
+$app->addBodyParsingMiddleware();
+
+require __DIR__ . '/../app/routes.php';
 
 $app->run();

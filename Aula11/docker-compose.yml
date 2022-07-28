@@ -8,3 +8,11 @@ services:
       - ${SERVER_PORT}:80
     env_file:
       - .env
+      
+  mariadb:
+    image: mariadb:10.7.4-focal
+    ports:
+      - ${DB_PORT}:3306
+    env_file:
+      - .env
+  

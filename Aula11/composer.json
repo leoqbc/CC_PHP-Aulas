@@ -1,6 +1,13 @@
 {
+    "autoload": {
+        "psr-4": {
+            "BeerFinder\\": "app/"
+        }
+    },
     "require": {
         "slim/slim": "^4.10",
-        "slim/psr7": "^1.5"
+        "slim/psr7": "^1.5",
+        "laminas/laminas-servicemanager": "^3.16",
+        "doctrine/dbal": "^3.3"
     }
 }
